@@ -1,0 +1,16 @@
+.location-card {
+    width: 100%;
+    padding: 1.5rem;
+    border: 0.03125rem solid #0008;
+    border-radius: 0.5rem;
+
+    display: grid;
+    gap: 0.5rem;
+
+    text-align: center;
+
+    .country {
+        font-size: 0.825rem;
+        color: #fff;
+    }
+}

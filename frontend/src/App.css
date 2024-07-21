@@ -1,0 +1,72 @@
+/* 
+#013a63 
+#014f86
+#2c7da0
+#61a5c2
+*/
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* ------ MOBILE SIZES + ------ */
+
+h2 {
+    font-size: 1.383rem;
+    margin-bottom: 0.5rem;
+}
+
+h3 {
+    font-size: 1.296rem;
+    margin-bottom: 0.5rem;
+}
+
+h4 {
+    font-size: 1.215rem;
+}
+
+h5 {
+    font-size: 1.138rem;
+}
+
+h6 {
+    font-size: 1.067rem;
+}
+
+p {
+    font-size: 1rem;
+    color: #000;
+}
+
+small {
+    font-size: 0.937rem;
+}
+
+/* ------ LAPTOP SIZES + ------ */
+@media only screen and (min-width: 65em) {
+    h2 {
+        font-size: 1.802rem;
+    }
+
+    h3 {
+        font-size: 1.602rem;
+    }
+
+    h4 {
+        font-size: 1.424rem;
+    }
+
+    h5 {
+        font-size: 1.266rem;
+    }
+
+    h6 {
+        font-size: 1.125rem;
+    }
+
+    small {
+        font-size: 0.889rem;
+    }
+}

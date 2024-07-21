@@ -1,0 +1,26 @@
+section {
+    background-color: #014f86;
+    padding: 2rem 1.5rem;
+
+    @media only screen and (min-width: 65em) {
+        padding: 2rem 15rem;
+    }
+}
+
+form {
+    display: grid;
+    gap: 0.75rem;
+
+    input {
+        padding: 0.5em;
+        font-size: 1rem;
+    }
+
+    @media only screen and (min-width: 65em) {
+        grid-template-columns: repeat(3, 1fr);
+
+        input {
+            grid-column: span 2;
+        }
+    }
+}
