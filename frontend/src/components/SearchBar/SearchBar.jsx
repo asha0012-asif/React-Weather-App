@@ -1,4 +1,6 @@
 import { useState } from "react";
+import { PropTypes } from "prop-types";
+
 import "./SearchBar.css";
 
 const SearchBar = ({ addLocation, setErrorMessage }) => {
@@ -75,6 +77,11 @@ const SearchBar = ({ addLocation, setErrorMessage }) => {
             </form>
         </section>
     );
+};
+
+SearchBar.propTypes = {
+    addLocation: PropTypes.func.isRequired,
+    setErrorMessage: PropTypes.func.isRequired,
 };
 
 export default SearchBar;

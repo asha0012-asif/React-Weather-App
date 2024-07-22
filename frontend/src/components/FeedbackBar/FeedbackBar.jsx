@@ -1,4 +1,5 @@
 import { useEffect } from "react";
+import { PropTypes } from "prop-types";
 
 import "./FeedbackBar.css";
 
@@ -16,6 +17,11 @@ const FeedbackBar = ({ errorMessage, setErrorMessage }) => {
             <span>{errorMessage}</span>
         </div>
     ) : null;
+};
+
+FeedbackBar.propTypes = {
+    errorMessage: PropTypes.string.isRequired,
+    setErrorMessage: PropTypes.func.isRequired,
 };
 
 export default FeedbackBar;

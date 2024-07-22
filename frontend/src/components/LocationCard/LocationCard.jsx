@@ -1,3 +1,5 @@
+import { PropTypes } from "prop-types";
+
 import "./LocationCard.css";
 
 const LocationCard = ({ location, handleSelectedLocation, removeLocation }) => {
@@ -21,6 +23,12 @@ const LocationCard = ({ location, handleSelectedLocation, removeLocation }) => {
             </button>
         </div>
     );
+};
+
+LocationCard.propTypes = {
+    location: PropTypes.object.isRequired,
+    handleSelectedLocation: PropTypes.func.isRequired,
+    removeLocation: PropTypes.func.isRequired,
 };
 
 export default LocationCard;

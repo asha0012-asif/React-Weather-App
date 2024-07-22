@@ -1,3 +1,5 @@
+import { PropTypes } from "prop-types";
+
 import "./Weather.css";
 
 const Weather = ({ weatherData }) => {
@@ -86,6 +88,10 @@ const Weather = ({ weatherData }) => {
             <p className="alert">No location selected.</p>
         </div>
     );
+};
+
+Weather.propTypes = {
+    weatherData: PropTypes.object,
 };
 
 export default Weather;

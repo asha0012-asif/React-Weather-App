@@ -1,16 +1,3 @@
-###### Status: Complete
-
-# Assignment: React Weather App
-
-A simple weather app where a user can provide a location to get back its weather data.
-
-## Languages Used
-
--   ReactJS
--   CSS
-
----
-
 # React + Vite
 
 This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
