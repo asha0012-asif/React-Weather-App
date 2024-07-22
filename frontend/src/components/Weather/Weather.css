@@ -1,8 +1,86 @@
 .weather {
     background-color: #61a5c2;
-    padding: 1.5rem;
+    padding: 3rem 1.5rem;
 
+    h2 {
+        text-align: center;
+        margin-bottom: 1rem;
+    }
+
+    .content {
+        margin-top: 1rem;
+
+        display: grid;
+        justify-items: stretch;
+        align-items: center;
+        gap: 2rem;
+
+        .main {
+            display: grid;
+            justify-items: center;
+            /* align-items: center; */
+            gap: 0.5rem;
+
+            .temperature {
+                font-size: 1.5rem;
+            }
+
+            sup {
+                font-size: 1rem;
+            }
+
+            @media only screen and (min-width: 45em) {
+                grid-template-columns: repeat(2, 1fr);
+            }
+        }
+
+        .extra {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 1rem;
+            justify-items: center;
+            align-items: center;
+
+            .group {
+                display: grid;
+                gap: 0.25rem;
+            }
+
+            .main-text {
+                font-size: 1.25rem;
+
+                .sub-text {
+                    font-size: 0.75rem;
+                }
+            }
+
+            .caption {
+                text-transform: uppercase;
+            }
+        }
+
+        @media only screen and (min-width: 45em) {
+            grid-template-columns: repeat(2, 1fr);
+        }
+    }
+
+    .textContent {
+        display: grid;
+        gap: 0.5rem;
+    }
+
+    p,
     .alert {
         color: #fff;
+    }
+
+    p,
+    span {
+        padding: 0.05rem;
+        text-align: center;
+    }
+
+    @media only screen and (min-width: 65em) {
+        padding: 3rem 15rem;
     }
 }

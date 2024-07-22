@@ -9,7 +9,7 @@ const SearchBar = ({ addLocation, setErrorMessage }) => {
 
         if (!location || location.length < 3) {
             setErrorMessage(
-                "Please enter in a location with at least 3 characters"
+                "Please enter in a location with at least 3 characters."
             );
             return;
         }
@@ -27,13 +27,15 @@ const SearchBar = ({ addLocation, setErrorMessage }) => {
             );
 
             if (!response.ok) {
-                throw new Error("Failed to fetch location data");
+                throw new Error(
+                    "Failed to fetch location data. Please try again."
+                );
             }
 
             const data = (await response.json())[0];
 
             if (!data) {
-                throw new Error("Please enter in a valid location");
+                throw new Error("Please enter in a valid location.");
             }
 
             const newLocation = {
@@ -57,6 +59,7 @@ const SearchBar = ({ addLocation, setErrorMessage }) => {
     return (
         <section>
             <form onSubmit={handleSubmit}>
+                <label htmlFor="location">City, Province, Country</label>
                 <input
                     type="search"
                     id="location"

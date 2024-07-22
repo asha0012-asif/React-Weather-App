@@ -16,10 +16,16 @@ const App = () => {
     const [errorMessage, setErrorMessage] = useState(null);
 
     const addLocation = (newLocation) => {
-        console.log(locations.length);
+        const isLocationAdded = locations.some(
+            (location) => location.name === newLocation.name
+        );
 
         if (locations.length > 5) {
-            setErrorMessage("Only 6 locations can be added at a time");
+            setErrorMessage("Only 6 locations can be added at a time.");
+        } else if (isLocationAdded) {
+            setErrorMessage(
+                `"${newLocation.name}" is already added. Please select another location.`
+            );
         } else {
             setLocations((locations) => [...locations, newLocation]);
         }
@@ -55,9 +61,35 @@ const App = () => {
             }
 
             const data = await response.json();
-            setWeatherData(data);
+
+            const weatherData = {
+                name: data.name,
+
+                temperature: Math.round(data.main.temp),
+                feelsLike: Math.round(data.main.feels_like),
+                maxTemperature: Math.round(data.main.temp_max),
+                minTemperature: Math.round(data.main.temp_min),
+
+                description: data.weather[0].main,
+                icon: data.weather[0].icon,
+
+                wind: {
+                    speed: Math.round(data.wind.speed * 10),
+                    gust: Math.round(data.wind.gust),
+                },
+
+                humidity: data.main.humidity,
+                pressure: data.main.pressure / 10,
+                visibility: Math.round((data.visibility / 1000) * 10) / 10,
+                ceiling: "∞",
+
+                sunrise: new Date(data.sys.sunrise * 1000).toLocaleTimeString(),
+                sunset: new Date(data.sys.sunset * 1000).toLocaleTimeString(),
+            };
+
+            setWeatherData(weatherData);
         } catch (error) {
-            console.error(error);
+            setErrorMessage(error);
         }
     };
 

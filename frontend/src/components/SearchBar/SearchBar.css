@@ -11,12 +11,16 @@ form {
     display: grid;
     gap: 0.75rem;
 
+    label {
+        display: none;
+    }
+
     input {
         padding: 0.5em;
         font-size: 1rem;
     }
 
-    @media only screen and (min-width: 65em) {
+    @media only screen and (min-width: 45em) {
         grid-template-columns: repeat(3, 1fr);
 
         input {

@@ -8,9 +8,30 @@
     gap: 0.5rem;
 
     text-align: center;
+    background-color: #0000;
+    transition: background-color 200ms ease-in-out;
 
     .country {
         font-size: 0.825rem;
         color: #fff;
+    }
+
+    button {
+        background-color: #863801;
+        transition: background-color 200ms ease-in-out;
+
+        &:hover {
+            background-color: #ae4e0a;
+            border-color: #ae4e0a;
+        }
+    }
+
+    &.selected {
+        background-color: #0005;
+    }
+
+    &:where(:hover, :focus-visible) {
+        cursor: pointer;
+        background-color: #0005;
     }
 }
