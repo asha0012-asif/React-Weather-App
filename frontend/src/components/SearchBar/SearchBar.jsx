@@ -23,7 +23,7 @@ const SearchBar = ({ addLocation, setErrorMessage }) => {
             const API_KEY = "b6cc0904a93ea4025e0862ff666ab903";
 
             const response = await fetch(
-                `http://api.openweathermap.org/geo/1.0/direct?q=${location}&appid=${API_KEY}`
+                `https://api.openweathermap.org/geo/1.0/direct?q=${location}&appid=${API_KEY}`
             );
 
             if (!response.ok) {
